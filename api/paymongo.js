@@ -30,8 +30,8 @@ export default async function handler(req, res) {
               name: item.title,
               quantity: 1
             })),
-            // Added 'qrph' and 'dob' (Direct Online Banking) to payment types
-            payment_method_types: ['qrph', 'card', 'gcash', 'paymaya', 'grab_pay', 'dob'],
+            // Verified PayMongo standard payment types
+            payment_method_types: ['card', 'gcash', 'paymaya', 'qrph', 'grab_pay'],
             success_url: `${origin}/`,
             cancel_url: `${origin}/`
           }
